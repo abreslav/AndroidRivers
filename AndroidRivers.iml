@@ -16,7 +16,7 @@
     <orderEntry type="library" name="ormlite-android-4.42" level="project" />
     <orderEntry type="library" name="ormlite-core-4.42" level="project" />
     <orderEntry type="module" module-name="ActionBarSherlock" />
-    <orderEntry type="library" scope="TEST" name="android" level="project" />
+    <orderEntry type="library" name="android" level="project" />
   </component>
 </module>
 
