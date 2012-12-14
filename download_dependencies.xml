@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="download_android" default="download_android">
+
+    <target name="download_android">
+        <mkdir dir="dependencies"/>
+        <mkdir dir="dependencies/download"/>
+        <mkdir dir="dependencies/android-sdk"/>
+        <mkdir dir="dependencies/android-sdk/platforms"/>
+
+        <get src="http://dl-ssl.google.com/android/repository/android-16_r03.zip"
+             dest="dependencies/download/android-16_r03.zip" usetimestamp="true"/>
+
+        <unzip src="dependencies/download/android-16_r03.zip" dest="dependencies/android-sdk/platforms"/>
+
+        <get src="http://dl-ssl.google.com/android/repository/platform-tools_r11-windows.zip"
+             dest="dependencies/download/platform-tools_r11-windows.zip" usetimestamp="true"/>
+
+        <unzip src="dependencies/download/platform-tools_r11-windows.zip" dest="dependencies/android-sdk"/>
+
+        <get src="http://dl.google.com/android/repository/tools_r19-windows.zip"
+             dest="dependencies/download/tools_r19-windows.zip" usetimestamp="true"/>
+
+        <unzip src="dependencies/download/tools_r19-windows.zip" dest="dependencies/android-sdk"/>
+
+        <get src="http://archive.apache.org/dist/ant/binaries/apache-ant-1.8.0-bin.zip"
+             dest="dependencies/download/apache-ant-1.8.0-bin.zip" usetimestamp="true"/>
+
+        <unzip src="dependencies/download/apache-ant-1.8.0-bin.zip" dest="dependencies"/>
+
+    </target>
+
+</project>
