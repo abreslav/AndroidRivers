@@ -30,8 +30,9 @@ public class RiverParcel(p: Parcel?): Parcelable {
                 return RiverParcel(p0)
             }
 
-            public override fun newArray(p0: Int): Array<RiverParcel?>? {
-                return Array<RiverParcel?>(p0, { null })
+            public override fun newArray(p0: Int): Array<RiverParcel>? {
+                // We should have this class annotated properly, btu this workaround works, too
+                return Array<RiverParcel?>(p0, { null }) as Array<RiverParcel>
             }
         }
     }
@@ -54,6 +55,6 @@ public class RiverParcel(p: Parcel?): Parcelable {
     }
 
     public override fun writeToParcel(p0: Parcel?, p1: Int) {
-        p0?.writeStringArray(array(title, url))
+        p0?.writeStringArray(array(title!!, url!!))
     }
 }
